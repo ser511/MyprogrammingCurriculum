@@ -93,5 +93,17 @@ class SearchMethod {
 }
 
 class StackPeekMethod {
-    public static void main()
+    public static void main(String[]args) {
+        Stack<String> stk= new Stack<>();
+        //pushing elements into Stack
+        stk.push("Apple");
+        stk.push("Grapes");
+        stk.push("Mango");
+        stk.push("Orange");
+        System.out.println("Stack: " +stk);
+        //Access elements from the top of the stack
+        String fruits =stk.peek();
+        //prints stack
+        System.out.println("Element at top of the stack: " +fruits);
+    }
 }
