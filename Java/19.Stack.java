@@ -1,4 +1,5 @@
 import java.util.Stack;
+import java.util.*;
 
 class StackExample {
     public static void main(String[]args)  {
@@ -53,14 +54,44 @@ class StackPushMethod {
     }
 
     }
-}
+
 
 static void pushelmnt(Stack stk, int x)
 {
 //invoking push() method
-stk.push(new Int(x));
+stk.push(new Integer(x));
 //prints modified stack
 System.out.println("push->" + x); 
 }
 
-//performing pop
+//performing pop operation
+
+static void popelmnt(Stack stk)
+
+{
+    System.out.print("pop->");
+    Integer x = (Integer) stk.pop();
+    System.out.println(x);
+    System.out.println("stack:" +stk);
+}
+}
+
+class SearchMethod {
+    public static void main(String[]args) {
+        Stack<String> stk= new Stack<>();
+        //pushing elements into stack 
+        stk.push("Mac Book");
+        stk.push("HP");
+        stk.push("Dell");
+        stk.push("Asus");
+        System.out.println("Stack:" + stk);
+        //Search an element
+        int location = stk.search("HP");
+        System.out.println("Location of Dell: " + location);
+
+    }
+}
+
+class StackPeekMethod {
+    public static void main()
+}
