@@ -1,5 +1,6 @@
 import java.util.Stack;
 import java.util.*;
+import java.util.Iterator; 
 
 class StackExample {
     public static void main(String[]args)  {
@@ -122,5 +123,59 @@ class StackSizeExample { //this wil be to find the stack size() method of the Ve
         //Find the size of the Stack
         int x=stk.size();
         System.out.println("The stack size is: "+x);
+    }
+}
+
+class StackIterationExample {
+    public static void main(String[]args) {
+        //creating an object of Stack Class
+        Stack stk= new Stack();
+        //pushing elements into stack
+        stk.push("BMW");
+        stk.push("Audi");
+        stk.push("Bugatti");
+        stk.push("Jaguar");
+        //iteration over the stack
+        
+        Iterator iterator =stk.iterator();
+        while(iterator.hasNext()) 
+        {
+            Object values = iterator.next();
+            System.out.println(values);
+        }
+    }
+
+}
+
+class StackIterationExample2 {
+    public static void main(String[]args) {
+        //creating an instance of Stack class
+        Stack <Integer> stk = new Stack<>();
+        stk.push(119);
+        stk.push(203);
+        stk.push(988);
+        System.out.println("Iteration over the stack using forEach() Method:");
+        //invoking forEach() method for iteration over the stack
+        stk.forEach(n ->
+        {
+            System.out.println(n);
+        });
+    }
+
+}
+
+class StackIterationExample3 {
+    public static void main(String[]args) {
+        Stack<Integer> stk = new Stack<>();
+        stk.push(119);
+        stk.push(203);
+        stk.push(988);
+        ListIterator<Integer> ListIterator = stk.listIterator(stk.size());
+        System.out.println("Iteration over the Stack from top to bottom");
+        while (ListIterator.hasPrevious())
+        {
+            Integer avg = ListIterator.previous();
+            System.out.println(avg);
+        }
     }
 }
