@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.*;
-
+import java.util.concurrent.PriorityBlockingQueue;
 
 class QueueExample {
     public static void main(String[]args) {
@@ -114,8 +114,35 @@ class GFGPriorityQueue {
         System.out.println(pQueue.peek());
     }
 }
-
+//Priority is an unbounded blocking queue which uses
+//the same ordering as class PriorityQueue and supplies blocking retrieval operations
+//WARNING *** Potential failiure to add elements due to resource exhaustion result OutOfMemoryError
 class GFGPriorityBlockingQueue {
+    public static void main(String args[])
+    {
+        //Creating empty priority
+        //blocking queue
+        Queue<Integer> pbq
+        = new PriorityBlockingQueue<Integer>();
+        //adding items to the PBQ
+        //using add()
+        pbq.add(10);
+        pbq.add(20);
+        pbq.add(15);
 
-    
+        //Printing the top element of 
+        //the PriorityBlockQueue
+        System.out.println(pbq.peek());
+
+        //Printing the top element and 
+        //removing it from the 
+        // PriorityBlockingQueue
+        System.out.println(pbq.poll());
+
+        // Printing the top element again
+        System.out.println(pbq.peek());
+
+    }
+
+
 }
