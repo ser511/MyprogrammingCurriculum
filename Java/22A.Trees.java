@@ -1,3 +1,5 @@
+//Only works when the file is being clicked specifically does not run when you only click on the folder that it is in
+
 class CoolTrees {
 
     public static void main(String[] args) {
